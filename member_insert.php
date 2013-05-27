@@ -5,10 +5,10 @@
 		$objDB = mysql_select_db("coursedetdb");
 		$strSQL = "INSERT INTO register ";
 		$strSQL .="VALUES ";
-		$strSQL .="('NULL' , '".$_POST["user"]."'    , '".$_POST["pwd"]."'  , '".$_POST["repwd"]."' ";
+		$strSQL .="('NULL' , '".$_POST["user"]."'    , '".$_POST["pwd"]."'  ";
 		$strSQL .=" ,'".$_POST["email"]."'   , '".$_POST["name"]."' , '".$_POST["surname"]."' ";
-		$strSQL .=" ,'".$_POST["gender"]."'  , '".$_POST["date"]."' , '".$_POST["month"]."' ";
-		$strSQL .=" ,'".$_POST["year"]."'    , '".$_POST["addr"]."') ";
+		$strSQL .=" ,'".$_POST["gender"]."' ";
+		$strSQL .=" , '".$_POST["addr"]."', 0000-00-00, 'user') ";
 		$objQuery = mysql_query($strSQL);
 		//echo $strSQL;
 	

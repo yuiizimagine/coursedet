@@ -1,6 +1,6 @@
 <?
 	session_start();
-	mysql_connect("localhost","root","cartoonman");
+	mysql_connect("localhost","root","1234");
 	mysql_select_db("coursedetdb");
 	$strSQL = "SELECT * FROM register WHERE user = '".mysql_real_escape_string($_POST['Username'])."' 
 	and pwd = '".mysql_real_escape_string($_POST['Password'])."'";

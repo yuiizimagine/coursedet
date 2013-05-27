@@ -88,8 +88,8 @@
 			<div class="inside">
 				<div id="slogan">
 					<div class="inside">
-						<h2><span></span> </h2>
-						<p></p>
+						<h2><span>Contact </span>CourseDet </h2>
+						<p>This form will allow you to send your suggestions and feedback to Scrum.org. Your email address is not logged by this system, but will be attached to the message that is forwarded from this page.</p>
 					</div>
 				</div>
 				<!-- <ul class="banners wrapper">

@@ -87,9 +87,12 @@
 		<div class="container">
 			<div class="inside">
 			<div id="slogan">
+				<!-- <img src="images/slide-title22.png"> -->
 					<div class="inside">
-						<h2><span></span> </h2>
-						<p></p>
+						<h2><span>About me</span> </h2>
+						<p>Scrum.org is the home of Scrum, and is leading the evolution and maturity of Scrum to improve the profession of software development.
+
+Scrum.org strives to provide all of the tools and resources needed by Scrum practitioners to deliver value using Scrum. We host the Scrum Guide in 30 languages, provide Scrum assessments to allow people to evaluate themselves and improve</p>
 					</div>
 				</div>
 				<!-- <ul class="banners wrapper">

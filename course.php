@@ -1,6 +1,3 @@
-<?
-	session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,36 +47,18 @@
 				</div>
 			</div>
 			<span class="top-info">Course &amp; Study + 66 882 805 028  </span>
-			<?
-				if($_SESSION['UserID'] != "")
-				{
-					echo "<form id=\"login-form\" method=\"post\" action=\"logout.php\">
-					<fieldset>
-					
-						<table>
-						<tr>
-						<td><h5>Hi,welcome&nbsp;&nbsp;&nbsp;&nbsp;<a href='profile.php'>".$_SESSION['UserID']."</h5></td>
-						<td><a href='#' class=\"login\" onClick=\"document.getElementById('login-form').submit()\"><span><span>Logout</span></span></a></td>
-						</tr></table>
-
-					</fieldset>
-					</form>";
-				}
-				else{
-					echo "<form id=\"login-form\" method=\"post\" action=\"check_login.php\">
-					<fieldset>
-					<span class=\"text\">
-						<input type=\"text\" name=\"Username\" value=\"Username\" onFocus=\"if(this.value=='Username'){this.value=''}\" onBlur=\"if(this.value==''){this.value='Username'}\">
+			<form action="" id="login-form">
+				<fieldset>
+					<span class="text">
+						<input type="text" value="Username" onFocus="if(this.value=='Username'){this.value=''}" onBlur="if(this.value==''){this.value='Username'}">
 					</span>
-					<span class=\"text\">
-						<input type=\"password\" name=\"Password\" value=\"Password\" onFocus=\"if(this.value=='Password'){this.value=''}\" onBlur=\"if(this.value==''){this.value='Password'}\">
+					<span class="text">
+						<input type="password" value="Password" onFocus="if(this.value=='Password'){this.value=''}" onBlur="if(this.value==''){this.value='Password'}">
 					</span>
-					<a href='#' class=\"login\" onClick=\"document.getElementById('login-form').submit()\"><span><span>Login</span></span></a>
-					<span class=\"links\"><a href='#'>Forgot Password?</a><br/><a href=\"register.php\">Register</a></span>
-					</fieldset>
-					</form>";
-				}
-			?>
+					<a href="#" class="login" onClick="document.getElementById('login-form').submit()"><span><span>Login</span></span></a>
+					<span class="links"><a href="#">Forgot Password?</a><br/><a href="register.php">Register</a></span>
+				</fieldset>
+			</form>
 		</div>
 	</header>
 <!-- content -->
@@ -88,8 +67,8 @@
 			<div class="inside bot-indent">
 				<div id="slogan">
 					<div class="inside">
-						<h2><span>Special Course </span>Detail of Special Course</h2>
-						<p>Detail</p>
+						<h2><span>Professional Scrum Training</span></h2>
+						<p>Today, you need to be agile; you need to maximize the value you receive from your software teams, and respond to constantly evolving customer needs to stay competitive. From the fundamentals provided in our Foundations course to more specialized training for Scrum Masters, Product Owners, and Development Team members, Scrum.org provides a complete family of courses to help you learn the skills you need to become agile. Click on a course name for more information.    </p>
 					</div>
 				</div>
 				<h2 class="extra">Course</h2>
@@ -336,49 +315,29 @@
 					<div class="line-ver3">
 						<div class="wrapper line-ver4">
 							<ul class="list col-1">
-								<li>Account Manager</li>
-								<li><a href="#">My Account</a></li>
-								<li><a href="#">My Renewals</a></li>
-								<li><a href="#">My Upgrades</a></li>
-								<li><a href="#">Account Settings</a></li>
-								<li><a href="#">Customer Information</a></li>
-								<li><a href="#">Order History</a></li>
+								<li>Other</li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
 							</ul>
 							<ul class="list col-2">
-								<li>Shopping</li>
-								<li><a href="#">Offer Disclaimers</a></li>
-								<li><a href="#">Domain Search</a></li>
-								<li><a href="#">Product Catalog</a></li>
-								<li><a href="#">Producr Advisor</a></li>
-								<li><a href="#">Gift Cards</a></li>
-								<li><a href="#">Mobile</a></li>
+								<li>Other</li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
 							</ul>
 							<ul class="list col-3">
-								<li>Resources</li>
-								<li><a href="#">Webmail</a></li>
-								<li><a href="#">WHOIS search</a></li>
-								<li><a href="#">ICANN Confirmation</a></li>
-								<li><a href="#">Affiliates</a></li>
-								<li><a href="#">Connect with Us</a></li>
-								<li><a href="#">Gadgets / Widgets</a></li>
+								<li>Other</li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
 							</ul>
 							<ul class="list col-4">
-								<li>Help and Support</li>
-								<li><a href="#">Support &amp; Sales</a></li>
-								<li><a href="#">Billing Support</a></li>
-								<li><a href="#">Email Our Support Team</a></li>
-								<li><a href="#">FAQ’s</a></li>
-								<li><a href="#">User’s Guides</a></li>
-								<li><a href="#">Report Spam</a></li>
+								<li>Other</li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
 							</ul>
 							<ul class="list col-5">
-								<li>About</li>
-								<li><a href="#">Careers</a></li>
-								<li><a href="#">Security Center</a></li>
-								<li><a href="#">Company Info</a></li>
-								<li><a href="#">News Center</a></li>
-								<li><a href="#">Customer Testimonials</a></li>
-								<li><a href="#">What’s New</a></li>
+								<li>Other</li>
+								<li><a href="#">Link</a></li>
+								<li><a href="#">Link</a></li>
 							</ul>
 						</div>
 					</div>
@@ -391,8 +350,8 @@
 <footer>
 	<div class="container">
 		<div class="inside">
-			Website template designed by <a class="new_window" href="http://www.templatemonster.com" target="_blank" rel="nofollow">www.templatemonster.com</a><br/>
-			3D Models provided by <a class="new_window" href="http://www.templates.com/product/3d-models/" target="_blank" rel="nofollow">www.templates.com</a>
+			Website created by WR Together<a class="new_window" href="http://www.templatemonster.com" target="_blank" rel="nofollow"></a><br/>
+			<a class="new_window" href="http://www.templates.com/product/3d-models/" target="_blank" rel="nofollow"></a>
 		</div>
 	</div>
 </footer>
