@@ -80,16 +80,17 @@
 		<div class="container">
 			<div id="faded">
 				<ul class="slides">
-					<li><img src="images/slide-title1.gif"><a href="#"><span><span>Read More</span></span></a></li>
-					<li><img src="images/slide-title4.gif"><a href="#"><span><span>Read More</span></span></a></li>
-					<li><img src="images/slide-title3.gif"><a href="#"><span><span>Read More</span></span></a></li>
-					<li><img src="images/slide-title2.gif"><a href="#"><span><span>Read More</span></span></a></li>
+					<li><img src="images/slide-title22.png"><a href="#"><span><span>Read More</span></span></a></li>
+					<li><img src="images/slide-title11.png"><a href="#"><span><span>Read More</span></span></a></li>
+					<li><img src="images/slide-title33.png"><a href="#"><span><span>Read More</span></span></a></li>
+					<li><img src="images/slide-title44.png"><a href="#"><span><span>Read More</span></span></a></li>
 				</ul>
 				<ul class="pagination">
-					<li><a href="#" rel="0"><span>News A</span><small>Get more information</small></a></li>
-					<li><a href="#" rel="1"><span>News B</span><small>Get more information</small></a></li>
-					<li><a href="#" rel="2"><span>News C</span><small>Get more information</small></a></li>
-					<li><a href="#" rel="3"><span>News D</span><small>Get more information</small></a></li>
+					<li><a href="#" rel="0"><span>Foundations</span><small>Get more information</small></a></li>
+					<li><a href="#" rel="1"><span>Master</span><small>Get more information</small></a></li>
+					<li><a href="#" rel="2"><span>Developer</span><small>Get more information</small></a></li>
+					<li><a href="#" rel="3"><span>Product Owner
+</span><small>Get more information</small></a></li>
 				</ul>
 			</div>
 			<div class="inside">
