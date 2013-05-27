@@ -10,7 +10,7 @@
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 -- 
--- ฐานข้อมูล: `scrum`
+-- ฐานข้อมูล: `coursedetdb`
 -- 
 
 -- --------------------------------------------------------
@@ -23,21 +23,21 @@ CREATE TABLE `register` (
   `member_id` int(11) NOT NULL auto_increment,
   `user` varchar(30) character set tis620 NOT NULL,
   `pwd` varchar(40) character set tis620 NOT NULL,
-  `repwd` varchar(40) character set tis620 NOT NULL,
   `email` varchar(100) NOT NULL,
   `name` varchar(80) character set tis620 NOT NULL,
   `surname` varchar(80) character set tis620 NOT NULL,
   `gender` varchar(20) character set tis620 NOT NULL,
-  `date` varchar(2) character set tis620 NOT NULL,
-  `month` varchar(2) character set tis620 NOT NULL,
-  `year` varchar(2) character set tis620 NOT NULL,
   `addr` varchar(255) character set tis620 NOT NULL,
+  `birth_day` date NOT NULL,
+  `status` varchar(10) NOT NULL,
   PRIMARY KEY  (`member_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=24 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
 
 -- 
 -- dump ตาราง `register`
 -- 
 
-INSERT INTO `register` VALUES (23, 'L', '1', 'q', 'z', 'aui', 'aa', 'male', '1', 'Ja', '20', 'A');
-INSERT INTO `register` VALUES (22, 'auimicky', '1234', '1234', 'auimicky@hotmail.com', 'Kanokporn', 'Ruanruen', 'female', '20', 'Ja', '19', 'Korea ');
+INSERT INTO `register` VALUES (23, 'L', '1', 'z', 'aui', 'aa', 'male', 'A', '0000-00-00', 'user');
+INSERT INTO `register` VALUES (22, 'auimicky', '1234', 'auimicky@hotmail.com', 'Kanokporn', 'Ruanruen', 'female', 'Korea ', '0000-00-00', 'user');
+INSERT INTO `register` VALUES (24, 'cartoonmed', 'cartoonman', 'cartoonman_jr@hotmail.com', 'attakorn', 'poonkesorn', 'male', '111/2', '0000-00-00', 'user');
+INSERT INTO `register` VALUES (25, 'jkme', 'jkmee', 'yuiizimagine@gmail.com', 'juthathip', 'kaensing', 'female', '99/99', '0000-00-00', 'admin');

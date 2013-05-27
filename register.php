@@ -1,4 +1,6 @@
-
+<?
+	session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,18 +50,36 @@
 				</div>
 			</div>
 			<span class="top-info">Course &amp; Study + 66 882 805 028  </span>
-			<form action="" id="login-form">
-				<fieldset>
-					<span class="text">
-						<input type="text" value="Username" onFocus="if(this.value=='Username'){this.value=''}" onBlur="if(this.value==''){this.value='Username'}">
+			<?
+				if($_SESSION['UserID'] != "")
+				{
+					echo "<form id=\"login-form\" method=\"post\" action=\"logout.php\">
+					<fieldset>
+					
+						<table>
+						<tr>
+						<td><h5>Hi,welcome&nbsp;&nbsp;&nbsp;&nbsp;<a href='profile.php'>".$_SESSION['UserID']."</h5></td>
+						<td><a href='#' class=\"login\" onClick=\"document.getElementById('login-form').submit()\"><span><span>Logout</span></span></a></td>
+						</tr></table>
+
+					</fieldset>
+					</form>";
+				}
+				else{
+					echo "<form id=\"login-form\" method=\"post\" action=\"check_login.php\">
+					<fieldset>
+					<span class=\"text\">
+						<input type=\"text\" name=\"Username\" value=\"Username\" onFocus=\"if(this.value=='Username'){this.value=''}\" onBlur=\"if(this.value==''){this.value='Username'}\">
 					</span>
-					<span class="text">
-						<input type="password" value="Password" onFocus="if(this.value=='Password'){this.value=''}" onBlur="if(this.value==''){this.value='Password'}">
+					<span class=\"text\">
+						<input type=\"password\" name=\"Password\" value=\"Password\" onFocus=\"if(this.value=='Password'){this.value=''}\" onBlur=\"if(this.value==''){this.value='Password'}\">
 					</span>
-					<a href="#" class="login" onClick="document.getElementById('login-form').submit()"><span><span>Login</span></span></a>
-					<span class="links"><a href="#">Forgot Password?</a><br/><a href="#">Register</a></span>
-				</fieldset>
-			</form>
+					<a href='#' class=\"login\" onClick=\"document.getElementById('login-form').submit()\"><span><span>Login</span></span></a>
+					<span class=\"links\"><a href='#'>Forgot Password?</a><br/><a href=\"register.php\">Register</a></span>
+					</fieldset>
+					</form>";
+				}
+			?>
 		</div>
 	</header>
 	<!-- content -->
