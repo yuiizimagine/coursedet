@@ -87,6 +87,7 @@
 		<div class="container">
 			<div class="inside">
 				<div id="slogan">
+				<img src="images/head_support.png">
 					<div class="inside">
 						<h2><span>What is Scrum?</span> </h2>
 						<p>Gain a high-level understanding of</p>

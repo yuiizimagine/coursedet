@@ -66,6 +66,7 @@
 		<div class="container">
 			<div class="inside bot-indent">
 				<div id="slogan">
+				<img src="images/head_course.png">
 					<div class="inside">
 						<h2><span>Professional Scrum Training</span></h2>
 						<p>Today, you need to be agile; you need to maximize the value you receive from your software teams, and respond to constantly evolving customer needs to stay competitive. From the fundamentals provided in our Foundations course to more specialized training for Scrum Masters, Product Owners, and Development Team members, Scrum.org provides a complete family of courses to help you learn the skills you need to become agile. Click on a course name for more information.    </p>

@@ -87,9 +87,10 @@
 		<div class="container">
 			<div class="inside">
 				<div id="slogan" class="bot-indent1">
+				<img src="images/head_FAQ.png">
 					<div class="inside">
-						<h2><span></span> </h2>
-						<p></p>
+						<h2><span>FAQ</span> SCRUM</h2>
+						<p>The Scrum.org community is a global network of Scrum practitioners, working together to improve software development. We invite you to join us. Take your time to learn what you can from others who have already been where you are. Find answers in our library of resources. Attend a live event. Seek guidance from community experts that know the challenges you face. And teach others tomorrow what you learn today.</p>
 					</div>
 				</div>
 				<!-- <div class="wrapper row-1">
@@ -227,17 +228,17 @@
 						</article> -->
 						<article class="col-2">
 							<h2><p>FAQ</p></h2><br>
-							<div class="img-box">Question A : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer A : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</div>
-							<p>Question B : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer B : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question C : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer C : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question D : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer D : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question E : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer E : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question F : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer F : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question G : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer G : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question H : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer H : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question I : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer I : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question J : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer J : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
-							<p>Question K : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<br> Answer K : xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+							<div class="img-box"><b>Question : Can we have single Scrum Master(SM) for multiple projects ?</b><br> Answer : It is recommended to have a dedicated Scrum Master for each project. Diluting this could also dilute the effectiveness</div>
+							<p><b>Question : Can Scrum Master be a Product Owner ?</b><br> Answer : Scrum Master should never be a product Owner.</p>
+							<p><b>Question : Can Scrum Master be technical and can SM help the team if they are stuck with technical issues ?</b><br> Answer :  It does not matter if the SM is coming from technical background or management. However if SM is technical, he/she should be careful enough not to dilute the SMs responsibilities in the process of helping the team with technology stuff.</p>
+							<p><b>Question : During the Scrum Meeting, my colleague talked about an impediment and I had the answer. However, can I answer it immediately and it won’t take more than 1 minute ?</b><br> Answer :  Do not diverge from the recommended rules around Scrum Meeting. Any discussion should happen outside the Scrum Meeting. Even though your answer takes only one minute, some one else could also jump in saying even he/she needs a chance to answer another question. This leads to chaos and could stretch Scrum Meeting beyond recommended limit of 15 to 20 minutes. My recommendation is to follow the rules by the book until every one gains experience.</p>
+							<p><b>Question : I just need another 4 hours to complete my task and the iteration is coming to an end, can I stretch the Iteration/Sprint duration ?</b><br> Answer : No. Iterations are time boxed.</p>
+							<p><b>Question : When people say Sprint duration is 30 days, is it working days ?</b><br> Answer : Sprint duration of 30 days means 30 calendar days.</p>
+							<p><b>Question : The team has completed all the tasks before the sprint ends, what should they do now ?</b><br> Answer :  The team can approach the product owner and request for additional items from the PB.</p>
+							<p><b>Question : Is it mandatory for the team to follow the Idealized line in the burn down charts ?</b><br> Answer :  Idealized(A.K.A Ideal) line provides just a point of reference.</p>
+							<p><b>Question : Can I work on the undone tasks in the next iteration ?</b><br> Answer : Undone tasks would go back to Product Backlog and Product Owner would make a call on the set of requirements for the next iteration with due feedback from the team.</p>
+							<p><b>Question : Should I use Iteration or Sprint ?</b><br> Answer : All sprints are iterations but not all iterations are Sprints. Sprint is the terminology coined by the Scrum co-founders to define an iteration.</p>
+							<p><b>Question : What does it mean to be a Certified Scrum Professional (CSP)?</b><br> Answer : A Certified Scrum Professional has proven experience and expertise in the art of Scrum. CSP is the level of certification that all practitioners of Scrum should strive to attain. Before becoming a CSP, applicants must be CSMs, CSPOs, or CSDs.</p>
 							<br><br><a href="#" class="link2"><span><span>Read More</span></span></a> </article>
 						<article class="col-3">
 							

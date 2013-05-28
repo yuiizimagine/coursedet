@@ -87,7 +87,7 @@
 		<div class="container">
 			<div class="inside">
 			<div id="slogan">
-				<!-- <img src="images/slide-title22.png"> -->
+				<img src="images/head_aboutme.png">
 					<div class="inside">
 						<h2><span>About me</span> </h2>
 						<p>Scrum.org is the home of Scrum, and is leading the evolution and maturity of Scrum to improve the profession of software development.
