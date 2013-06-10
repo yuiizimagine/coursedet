@@ -24,6 +24,7 @@ CREATE TABLE `register` (
   `user` varchar(30) character set tis620 NOT NULL,
   `pwd` varchar(40) character set tis620 NOT NULL,
   `email` varchar(100) NOT NULL,
+  `visible_mail` tinyint(1) NOT NULL,
   `name` varchar(80) character set tis620 NOT NULL,
   `surname` varchar(80) character set tis620 NOT NULL,
   `gender` varchar(20) character set tis620 NOT NULL,
@@ -31,13 +32,14 @@ CREATE TABLE `register` (
   `birth_day` date NOT NULL,
   `status` varchar(10) NOT NULL,
   PRIMARY KEY  (`member_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 -- 
 -- dump ตาราง `register`
 -- 
 
-INSERT INTO `register` VALUES (23, 'L', '1', 'z', 'aui', 'aa', 'male', 'A', '0000-00-00', 'user');
-INSERT INTO `register` VALUES (22, 'auimicky', '1234', 'auimicky@hotmail.com', 'Kanokporn', 'Ruanruen', 'female', 'Korea ', '0000-00-00', 'user');
-INSERT INTO `register` VALUES (24, 'cartoonmed', 'cartoonman', 'cartoonman_jr@hotmail.com', 'attakorn', 'poonkesorn', 'male', '111/2', '0000-00-00', 'user');
-INSERT INTO `register` VALUES (25, 'jkme', 'jkmee', 'yuiizimagine@gmail.com', 'juthathip', 'kaensing', 'female', '99/99', '0000-00-00', 'admin');
+INSERT INTO `register` VALUES (23, 'L', '1', 'z', 1, 'aui', 'aa', 'male', 'A', '0000-00-00', 'user');
+INSERT INTO `register` VALUES (22, 'auimicky', '1234', 'auimicky@hotmail.com', 0, 'Kanokporn', 'Ruanruen', 'female', 'Korea ', '0000-00-00', 'user');
+INSERT INTO `register` VALUES (24, 'cartoonmed', 'cartoonman', 'cartoonman_jr@hotmail.com', 0, 'attakorn', 'poonkesorn', 'male', '111/2', '1991-04-01', 'user');
+INSERT INTO `register` VALUES (25, 'jkme', 'jkmee', 'yuiizimagine@gmail.com', 1, 'juthathip', 'kaensing', '', '99/99', '1991-04-09', 'admin');
+INSERT INTO `register` VALUES (30, 'fff', 'fff', 'fff', 0, 'fff', 'fff', 'female', 'fff', '2001-07-03', 'user');

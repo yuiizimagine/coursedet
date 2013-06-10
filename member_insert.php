@@ -5,17 +5,24 @@
 		$objDB = mysql_select_db("coursedetdb");
 		$strSQL = "INSERT INTO register ";
 		$strSQL .="VALUES ";
-		$strSQL .="('NULL' , '".$_POST["user"]."'    , '".$_POST["pwd"]."'  ";
-		$strSQL .=" ,'".$_POST["email"]."'   , '".$_POST["name"]."' , '".$_POST["surname"]."' ";
-		$strSQL .=" ,'".$_POST["gender"]."' ";
-		$strSQL .=" , '".$_POST["addr"]."', 0000-00-00, 'user') ";
+		$strSQL .="('NULL' ";
+		$strSQL .=" , '".$_POST["user"]."' ";
+		$strSQL .=" , '".$_POST["pwd"]."' ";
+		$strSQL .=" , '".$_POST["email"]."' ";
+		$strSQL .=" ,  ".$_POST["visible_mail"]." ";
+		$strSQL .=" , '".$_POST["name"]."' ";
+		$strSQL .=" , '".$_POST["surname"]."' ";
+		$strSQL .=" , '".$_POST["gender"]."' ";
+		$strSQL .=" , '".$_POST["addr"]."' ";
+		$strSQL .=" , '".$_POST["year"]."-".$_POST["month"]."-".$_POST["date"]."' ";
+		$strSQL .=" , 'user') ";
 		$objQuery = mysql_query($strSQL);
 		//echo $strSQL;
 	
 		if($objQuery)
 		{
+			header("Location: index.php");
 			echo "<p> Congruatulation! Sign up suceesful </p><hr>";
-			echo "<a href=\"index.php\"> <p> Go to homepage </p> </a>";
 		}
 		else
 		{

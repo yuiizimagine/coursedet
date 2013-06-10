@@ -115,7 +115,7 @@
 		echo "Record not found<br>";
 	}
 ?>
-                          <form name="form1" method="post" action="member_insert.php">
+                          <form id='edit-profile' name="form1" method="post" action="member_edit.php">
                           
                           
                             <table width="566" border="0" cellpadding="3">
@@ -130,7 +130,7 @@
                                 <td>Name</td>
                                 <td><label for="name"></label>
                                 <?
-                                  echo $objSelect[name]."</td>";
+                                  echo "<input type='text' name='name' id='name' value='".$objSelect[name]."'</td>";
 								?>
                                 <td>&nbsp;</td>
                               </tr>
@@ -139,7 +139,7 @@
                                 <td>Surname</td>
                                 <td><label for="surname"></label>
                                 <?
-                                  echo $objSelect[surname]."</td>";
+                                  echo "<input type='text' name='surname' id='surname' value='".$objSelect[surname]."'></td>";
 								?>
                                 <td>&nbsp;</td>
                               </tr>
@@ -153,44 +153,77 @@
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
-								<?
-									if($_SESSION["Visible_mail"] == true){
-										echo "<td height=\"30\">&nbsp;</td>";
-										echo "<td>E-mail</td>";
-										echo "<td><label for=\"email\"></label>";
-                                
-										echo $objSelect[email]."</td>";
-										
-								
-										echo "<td>&nbsp;</td>";
-									}
+                                <td height="30">&nbsp;</td>
+                                <td>E-mail</td>
+                                <td><label for="email"></label>
+                                <?
+                                  echo "<input type='text' name='email' id='email' value='".$objSelect[email]."' size='30'></td>";
 								?>
+                                <td>&nbsp;</td>
                               </tr>
                               <tr>
                                 <td height="33">&nbsp;</td>
                                 <td>Gender</td>
-                                <td>
-								<?
-                                  echo $objSelect[gender]."</td>";
-								?>
+                                <td><label for="gender"></label>
+                                  <label>
+                                    <input type="radio" name="gender" id="male" value="male">
+                                  </label>
+                                  <label for="gender"></label>
+                                  Male &nbsp;&nbsp;
+  <label>
+    <input type="radio" name="gender" id="female" value="female">
+    Female </label></td>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
                                 <td height="31">&nbsp;</td>
                                 <td>Birthdate</td>
-                                <td>
-								<?
-                                  echo $objSelect[birth_day]."</td>";
-								?>
+                                <td>dates
+                                  <select name="date" size="1" id="date">
+                                  <? for($i=1 ; $i<=31 ; $i++)
+								  { 
+								  	echo "<option value='".$i."'>".$i."</option>";
+								  } 
+								  ?>
+                                  </select>
+  &nbsp;&nbsp;Months
+  <label for="month"></label>
+  <select name="month" size="1" id="month">
+    <option value='01'>January</option>
+    <option value='02'>February</option>
+    <option value='03'>March</option>
+    <option value='04'>April </option>
+    <option value='05'>May </option>
+    <option value='06'>June </option>
+    <option value='07'>July </option>
+    <option value='08'>August </option>
+    <option value='09'>September </option>
+    <option value='10'>October </option>
+    <option value='11'>November </option>
+    <option value='12'>December </option>
+  </select>
+  &nbsp;&nbsp;Years
+  <label for="year"></label>
+  <select name="year" size="1" id="year">
+  <? for($i=2013 ; $i>=1960 ; $i--)
+  { 
+  	echo "<option value='".$i."'>".$i."</option>";
+  } 
+  ?>
+</select></td>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
                                 <td height="31">&nbsp;</td>
                                 <td>Address</td>
-                                <td>
-								<?
-                                  echo $objSelect[addr]."</td>";
+                                <td><label for="date"></label>
+                                  <label for="addr"></label>
+                                  <?
+                                  echo "<textarea name='addr' id='addr' cols='45' rows='5'>"
+								  .$objSelect[addr].
+								  "</textarea>";
 								?>
+                                  </td>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
@@ -238,9 +271,10 @@
   <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <div class="aligncenter">
-  <a href="profile_edit.php" class="link1"\><span><span>Edit Profile</span></span>
-  </a>
-  
+	<a href="#" class="link1" onClick="document.getElementById('edit-profile').submit()" \><span><span>Save Change</span></span>
+	</a>
+	<a href="profile.php" class="link1" \><span><span>Cancle</span></span>
+	</a>
   </div>
                             </p>
                             </br>
