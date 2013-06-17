@@ -115,7 +115,7 @@
 		echo "Record not found<br>";
 	}
 ?>
-                          <form name="form1" method="post" action="member_insert.php">
+                          <form name="form1" >
                           
                           
                             <table width="566" border="0" cellpadding="3">
@@ -150,6 +150,39 @@
                                 <?
                                   echo $objSelect[user]."</td>";
 								?>
+                                <td>&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="29">&nbsp;</td>
+                                <td width="138" height="33">Permission</td>
+                                <td width="354"><label for="user"></label>
+                                <?
+                                  echo $objSelect[status]."</td>";
+								?>
+                                <td>&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="29">&nbsp;</td>
+                                <td width="138" height="33">Class User</td>
+                                <td width="354"><label for="user"></label>
+                                <?
+									if($objSelect[trainer] == 1 && $objSelect[practitioner] == 1){
+										echo "trainer & practitioner";
+									}
+									else{
+										if($objSelect[trainer] == 1){
+											echo "trainer";
+										}
+										else if($objSelect[practitioner] == 1){
+											echo "practitioner";
+										}
+										else{
+											echo "None";
+										}
+									}
+                                  
+								?>
+								</td>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
@@ -191,6 +224,37 @@
 								<?
                                   echo $objSelect[addr]."</td>";
 								?>
+                                <td>&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="31">&nbsp;</td>
+                                <td>Register to trainer</td>
+                                <td>
+									<?
+									if($objSelect["trainer"] == 0){
+										echo "<a href='status_edit.php?class=trainer&value=1'>register</a>";
+									}
+									else {
+										echo "<a href='status_edit.php?class=trainer&value=0'>unregister</a>";
+									}
+									?>
+								</td>
+                                <td>&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="31">&nbsp;</td>
+                                <td>Register to practitioner</td>
+                                <td>
+									<?
+									if($objSelect["practitioner"] == 0){
+										echo "<a href='status_edit.php?class=practitioner&value=1'>register</a>";
+									}
+									else {
+										echo "<a href='status_edit.php?class=practitioner&value=0'>unregister</a>";
+									}
+									?>
+									
+								</td>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
