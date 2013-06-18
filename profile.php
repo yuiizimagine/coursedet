@@ -88,16 +88,16 @@
 	<section id="content">
 		<div class="container">
 			<div class="inside">
-			<div id="slogan">
+			<!--<div id="slogan">
 					<div class="inside">
 						<h2><span></span></h2>
-					</div>
+					</div>-->
 				</div>
 				<div class="inside1">
 					<div class="wrap row-2">
 
 						<article class="col-2">
-							<h2> Profile</h2>
+							<h2> PROFILE ME</h2>
 							<table width="200" border="1">
 							  <tr>
 							    <td><img src="images/yui.png" width="400" height="267"></td>

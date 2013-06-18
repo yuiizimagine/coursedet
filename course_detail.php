@@ -80,179 +80,65 @@
 					</fieldset>
 					</form>";
 				}
-			?>
+			?> 
 		</div>
 	</header>
 	<!-- content -->
 	<section id="content">
 		<div class="container">
 			<div class="inside">
-			<div id="slogan">
+			<!--<div id="slogan">
 					<div class="inside">
 						<h2><span></span></h2>
-					</div>
+					</div> -->
 				</div>
 				<div class="inside1">
 					<div class="wrap row-2">
 
 						<article class="col-2">
-							<h2> Course Detail</h2>
-							<p>&nbsp;</p>
-                          <form name="form1" method="post" action="member_insert.php">
-                            <table width="566" border="0" cellpadding="3">
-                              <tr>
-                                <td width="8" height="15">&nbsp;</td>
-                                <td width="138" height="33"><strong>Personal Data<hr></strong></td>
-                                <td width="354">&nbsp;<hr></td>
-                                <td width="32">&nbsp;<hr></td>
-                              </tr>
-                              <tr>
-                                <td height="32">&nbsp;</td>
-                                <td>Name</td>
-                                <td><label for="name"></label>
-                                  <input type="text" name="name" id="name"></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="32">&nbsp;</td>
-                                <td>Surname</td>
-                                <td><label for="surname"></label>
-                                  <input type="text" name="surname" id="surname"></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="29">&nbsp;</td>
-                                <td width="138" height="33">Username</td>
-                                <td width="354"><label for="user"></label>
-                                  <input type="text" name="user" id="user"></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="30">&nbsp;</td>
-                                <td>E-mail</td>
-                                <td><label for="email"></label>
-                                  <input type="text" name="email" id="email"></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="33">&nbsp;</td>
-                                <td>Gender</td>
-                                <td><label for="gender"></label>
-                                  <label>
-                                    <input type="radio" name="gender" id="male" value="male">
-                                  </label>
-                                  <label for="gender"></label>
-                                  Male &nbsp;&nbsp;
-  <label>
-    <input type="radio" name="gender" id="female" value="female">
-    Female </label></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="31">&nbsp;</td>
-                                <td>Birthdate</td>
-                                <td>dates
-                                  <select name="date" size="1" id="date">
-                                  <? for($i=1 ; $i<=31 ; $i++)
-								  { 
-								  	echo "<option>".$i."</option>";
-								  } 
-								  ?>
-                                  </select>
-  &nbsp;&nbsp;Months
-  <label for="month"></label>
-  <select name="month" size="1" id="month">
-    <option>January</option>
-    <option>February</option>
-    <option>March</option>
-    <option>April </option>
-    <option>May </option>
-    <option>June </option>
-    <option>July </option>
-    <option>August </option>
-    <option>September </option>
-    <option>October </option>
-    <option>November </option>
-    <option>December </option>
-  </select>
-  &nbsp;&nbsp;Years
-  <label for="year"></label>
-  <select name="year" size="1" id="year">
-  <? for($i=2013 ; $i>=1960 ; $i--)
-  { 
-  	echo "<option>".$i."</option>";
-  } 
-  ?>
-</select></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="31">&nbsp;</td>
-                                <td>Address</td>
-                                <td><label for="date"></label>
-                                  <label for="addr"></label>
-                                  <textarea name="addr" id="addr" cols="45" rows="5"></textarea></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="31">&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              
-                              <tr>
-                                <td height="31">&nbsp;</td>
-                                <td width="138" height="33"><strong>Register History</strong><hr></td>
-                                <td width="354">&nbsp;<hr></td>
-                                <td>&nbsp;<hr></td>
-                              </tr>
-                              <tr>
-                                <td height="31">&nbsp;</td>
-                                <td height="33" colspan="3">
-                                <table width="100%" border="1"> 
-                                  <tr>
-                                    <td width="254"><div align="center"><strong>Course Name</strong></div></td>
-                                    <td width="128"><div align="center"><strong>Date</strong></div></td>
-                                    <td width="148"><div align="center"><strong>Pay Status</strong></div></td>
-                                  </tr>
-                                  <tr>
-                                    <td><div align="left">Agile</div></td>
-                                    <td><div align="left">1 / 12./ 2555</div></td>
-                                    <td><div align="center">paid</div></td>
-                                  </tr>
-                                  <tr>
-                                    <td><div align="left">Software Product Line</div></td>
-                                    <td><div align="left">1 / 4./ 2552</div></td>
-                                    <td><div align="center">paid</div></td>
-                                  </tr>
-                                </table></td>
-                              </tr>
-                            </table>
-                            
-                            <p>&nbsp;</p>
-                            <p><!--                          </form>
-                          <p><form action="member_insert.php" method="post">  -->
-                              
-                              
-                              
-  <br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <input type="submit" name="subRegis" value="Sign up"/>
-                            </p>
-                            </br>
-                          </form>
-<!--</form>&nbsp; -->
-</p>
-					    <!-- <div class="img-box"><img src="images/2page-img.jpg">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloreque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem eaque ipsa quae sequi nesciunt. </div>
-							<p class="p1">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur. Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur vero eos et accusamus et iusto.</p>
-							<a href="#" class="link2"><span><span>Read More</span></span></a> --> </article>
+							<h1>Course Detail</h1><br>
+							<img src="images/crouse-detail.png">
+							<h2>The Professional Scrum Foundations Program</h2>
+							<p><b>Details</b></p>
+							<UL TYPE="square">
+							<LI>Fee: $100</LI>
+							<LI>Passing score: 85%</LI>
+							<LI>Time limit: 60 minutes</LI>
+							<LI>Format: Multiple Choice and True/False</LI>
+							<LI>Required course: None</LI>
+							<LI>Recommended course: Professional Scrum Foundations or Professional Scrum Master</LI>
+							<LI>Practice Assessment: Scrum Open</LI>
+							</UL>
+							
+							<br><br><p><b>Overview</b></p>
+							<p>Scrum Teams succeed best with a solid foundation and this two-day course prepares individuals or teams to begin effectively using Scrum immediately. The Scrum framework, mechanics, and roles of Scrum are emphasized with a focus on practical application. </p>
+							<p>Common missteps in the adoption of Scrum have been seen over and over again across industries, companies, and teams. Rather than coaching teams back from a poorly functioning Scrum implementation, PSF exposes these common missteps, increases the awareness of the associated symptoms, and provides prescriptive guidance to avoid going off track. </p>
+							<p>Professional Scrum Foundations (PSF) is the perfect introduction to Scrum for anyone new to the framework. Whether your team needs a flawless Scrum launch or needs to reboot a struggling Scrum implementation, this class lays the foundation for an effective Scrum team. This course also provides the foundation of knowledge needed for role-focused training for Product Owners, Scrum Masters and Developers.</p>
+							
+							<br><p><b>Audience</b></p>
+							<p>But the PSF course is not for everyone. Well-functioning Scrum teams looking for assistance with advanced topics like Scaling Scrum or implementing a rigorous ROI framework will not receive as much benefit from this course. Teams looking to explore more advanced Scrum topics such as Scaling Scrum or Release Planning should consider the Professional Scrum Master program.
+							PSF is most effective as a training event for a dedicated team.</p>
+							<p><b>Syllabus</b></p>
+							<p>In addition to the subjects noted below, students actively participate in the Scrum process with realistic and practical hands-on exercises that reinforce the learning points. Practicing Scrum ensures that students complete the class with new skills in addition to new knowledge and theory.</p>
+							<img src="images/crouse-detail1.png">
+							<br><br><p><b>The Scrum Framework</b></p>
+							<p>Students dive into the Scrum software development framework including, roles and responsibilities, principles, artifacts, events and time boxes, and rules and customs.</p>
+							<p><b>Introducing Scrum and Agile</b></p>
+							<p>This module discusses the current state of the software industry and Scrum is role within it. Topics include the origins of Scrum, misconceptions of the framework, the value that Scrum provides, and an exploration of self-organization as a power tool for increasing productivity.</p>
+							<p><b>Scrum Planning</b></p>
+							<p>Learn practical techniques of planning releases, managing Product Backlogs, keeping Sprints on track, and maintaining healthy team behaviors. Although many effective techniques exist for expressing requirements, this module equips teams to discover, express, and decompose requirements as Backlog Items using proven techniques.</p>
+							<p><b>Keeping Scrum Healthy</b></p>
+							<p>This module focuses on common missteps teams make when adopting Scrum and strategies to avoid them. In addition to discussing typical patterns/anti-patterns in this module, class attendees practice some of the more courageous conversations that commonly occur.</p>
+							<p><b>Getting Started</b></p>
+							<p>Following an excellent training event, Teams often struggle implementing what seemed so reasonable just a few days ago. This discussion helps attendees plan and prepare to actually be effective with Scrum immediately, marking the PSF as the true catalyst for change and increasing agility within your organization.</p>
+							
+					    </article>
 						<div class="clear"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> 
 </div>
 <!-- aside -->
 <aside>
@@ -262,7 +148,7 @@
 				<div class="line-ver2">
 					<div class="line-ver3">
 						<div class="wrapper line-ver4">
-							<!-- <ul class="list col-1">
+							 <ul class="list col-1">
 								<li>Other</li>
 								<li><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
@@ -286,7 +172,7 @@
 								<li>Other</li>
 								<li><a href="#">Link</a></li>
 								<li><a href="#">Link</a></li>
-							</ul> -->
+							</ul> 
 						</div>
 					</div>
 				</div>
