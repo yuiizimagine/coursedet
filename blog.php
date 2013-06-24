@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>CourseDet - CONTACTS</title>
+<title>CourseDet - COURSE</title>
 <meta name="description" content="Place your description here">
 <meta name="keywords" content="put, your, keyword, here">
 <meta name="author" content="Templates.com - website templates provider">
@@ -21,13 +21,13 @@
 <script type="text/javascript" src="js/script.js"></script>
 <!--[if lt IE 7]>
 <script type="text/javascript" src="http://info.template-help.com/files/ie6_warning/ie6_script_other.js"></script>
-<![endif]-->
+ <![endif]-->
 <!--[if lt IE 9]>
 <script type="text/javascript" src="js/html5.js"></script>
 <![endif]-->
 </head>
-<body id="page6">
-<div class="tail-top1">
+<body id="page3">
+<div class="tail-top2">
 <!-- header -->
 	<header>
 		<div class="container">
@@ -86,49 +86,88 @@
 <!-- content -->
 	<section id="content">
 		<div class="container">
-			<div class="inside">
+			<div class="inside bot-indent">
 				<div id="slogan">
-				<img src="images/head_contact.png">
+				<img src="images/head_blog.png">
 					<div class="inside">
-						<h2><span>Contact </span>CourseDet </h2>
-						<p>This form will allow you to send your suggestions and feedback to Scrum.org. Your email address is not logged by this system, but will be attached to the message that is forwarded from this page.</p>
+						<h2><span>TOPIC</span></h2>
+						<p>Today, you need to be agile; you need to maximize the value you receive from your software teams, and respond to constantly evolving customer needs to stay competitive. From the fundamentals provided in our Foundations course to more specialized training for Scrum Masters, Product Owners, and Development Team members, Scrum.org provides a complete family of courses to help you learn the skills you need to become agile. Click on a course name for more information.    </p>
 					</div>
 				</div>
-				<!-- <ul class="banners wrapper">
-					<li><a href="#">Course A  &nbsp; <b>$Price</b></a></li>
-					<li><a href="#">Course B  &nbsp; <b>$Price</b></a></li>
-					<li><a href="#">Course C  &nbsp; <b>$Price</b></a></li>
-					<li><a href="#">Course D  &nbsp; <b>$Price</b></a></li>
-				</ul> -->
-				<div class="inside1">
-					<div class="wrap">
-						<article class="col-1">
-							<h2>Postal Address</h2>
-							<address>
-								<b>Zip Code:</b>xxxxx<br />
-								<b>Country:</b>xxxxx<br />
-								<b>State:</b>xxxxx<br />
-								<b>City:</b>xxxxx<br />
-								<b>Telephone:</b>+xx xxxxxx<br />
-								<b>Fax:</b>+xxx xxxxxxx<br />
-								<b>Email:</b><a href="#">xxxxx@mail.com</a>
-							</address>
-							
-						</article>
-						<article class="col-2">
-							<h2>Contact Form</h2>
-							<form id="contacts-form" action="">
-								<fieldset>
-									<div class="field text"><label>Your Name:</label><input type="text"></div>
-									<div class="field text"><label>Your E-mail:</label><input type="email"></div>
-									<div class="field"><label>Your Message:</label><textarea></textarea></div>
-									<div class="alignright"><a href="#" class="link4" onClick="document.getElementById('contacts-form').reset()"><span><span>Clear</span></span></a><a href="#" class="link2" onClick="document.getElementById('contacts-form').submit()"><span><span>Send</span></span></a></div>
-								</fieldset>
-							</form>
-						</article>
-						<div class="clear"></div>
+				<h1 class="extra">BLOG UPDATE</h1>
+				<div class="box extra">
+					<div class="border-right">
+						<div class="border-bot">
+							<div class="border-left">
+								<div class="left-top-corner1">
+									<div class="right-top-corner1">
+										<div class="right-bot-corner">
+											<div class="left-bot-corner">
+												<div class="inner">
+													
+													
+													<?
+													include("phpMySQLFunctionDatabase.php");
+	
+													$strTable = "blog";
+													$objSelect = fncSelectAllRecord($strTable);
+													if(!$objSelect)
+													{
+														echo "Record not found<br>";
+													}
+													
+													//for($i = 1; $i < $objSelec ; $i++){
+													echo "<div class='border-top'>
+														<div class='inner1'>
+															<h4 class='extra aligncenter'>".$objSelect[topic]."</h4>
+															<div class=''>
+																<div class='line-ver1 left-indent'>
+																	<div class='line-ver2'>
+																		<div class='line-ver3'>
+																			<div class='wrap line-ver4'>
+																				<article class='col-1 indent1'>
+																					<ul class='info-list1'>
+																						"
+																						.$objSelect[detail].
+																						"
+																					</ul>
+																				</article>
+																				
+																				<div class='clear'></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>";
+													//}
+													
+													
+													?>
+													
+												</div>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
+				
+				
+				<form >
+				<?
+				if($_SESSION['Status'] == "admin"){
+					echo "dddddddddddddd";
+														
+				}
+				?>
+				</form>
+				
+				
 			</div>
 		</div>
 	</section>

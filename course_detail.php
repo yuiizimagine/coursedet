@@ -41,6 +41,7 @@
 								<li><a href="course.php">Course</a></li>
 								<!-- <li><a href="hosting.php">[Hosting]</a></li> -->
 								<li><a href="support.php">Support</a></li>
+								<li><a href="Blog.php">Blog</a></li>
 								<li><a href="FAQ.php">FAQ</a></li>
 								<li><a href="contacts.php">Contacts</a></li>
 								<li><a href="aboutMe.php">About me</a></li>

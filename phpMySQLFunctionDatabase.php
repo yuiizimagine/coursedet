@@ -17,6 +17,14 @@
 			$objQuery = @mysql_query($strSQL);
 			return @mysql_fetch_array($objQuery);
 	}
+	
+	/**** function select all record ****/
+	function fncSelectAllRecord($strTable)
+	{
+			$strSQL = "SELECT * FROM $strTable ";
+			$objQuery = @mysql_query($strSQL);
+			return @mysql_fetch_array($objQuery);
+	}
 
 	/**** function update record ****/
 	function fncUpdateRecord($strTable,$strCommand,$strCondition)
