@@ -64,4 +64,4 @@ INSERT INTO `register` VALUES (23, 'L', '1', 'z', 1, 'aui', 'aa', 'male', 'A', '
 INSERT INTO `register` VALUES (22, 'auimicky', '1234', 'auimicky@hotmail.com', 0, 'Kanokporn', 'Ruanruen', 'female', 'Korea ', '0000-00-00', 'user', 0, 0);
 INSERT INTO `register` VALUES (24, 'cartoonmed', 'cartoonman', 'cartoonman_jr@hotmail.com', 0, 'attakorn', 'poonkesorn', 'male', '111/2', '1991-04-01', 'admin', 0, 0);
 INSERT INTO `register` VALUES (25, 'jkme', 'jkmee', 'yuiizimagine@gmail.com', 1, 'juthathip', 'kaensing', '', '99/99', '1991-04-09', 'admin', 0, 0);
-INSERT INTO `register` VALUES (31, 'ccc', 'ccc', 'aaa', 1, 'aaa', 'aaa', 'female', 'aaa', '2013-01-01', 'user', 1, 1);
+INSERT INTO `register` VALUES (31, 'ccc', 'ccc', 'aaa', 1, 'aaa', 'aaa', 'female', 'aaa', '2013-01-01', 'user', 0, 0);
