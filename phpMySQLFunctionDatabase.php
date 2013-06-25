@@ -22,8 +22,8 @@
 	function fncSelectAllRecord($strTable)
 	{
 			$strSQL = "SELECT * FROM $strTable ";
-			$objQuery = @mysql_query($strSQL);
-			return @mysql_fetch_array($objQuery);
+			return @mysql_query($strSQL);
+
 	}
 
 	/**** function update record ****/

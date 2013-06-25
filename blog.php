@@ -111,28 +111,40 @@
 	
 													$strTable = "blog";
 													$objSelect = fncSelectAllRecord($strTable);
-													if(!$objSelect)
-													{
-														echo "Record not found<br>";
-													}
+													//if(!$objSelect)
+													//{
+													//	echo "Record not found<br>";
+													//}
+													
+													while ($objResult = mysql_fetch_object($objSelect)) { 
+														//echo "".$objResult->topic."<br>";
+													
 													
 													//for($i = 1; $i < $objSelec ; $i++){
 													echo "<div class='border-top'>
 														<div class='inner1'>
-															<h4 class='extra aligncenter'>".$objSelect[topic]."</h4>
+															<h4 class='extra aligncenter'>".$objResult->topic."</h4>
 															<div class=''>
 																<div class='line-ver1 left-indent'>
 																	<div class='line-ver2'>
 																		<div class='line-ver3'>
 																			<div class='wrap line-ver4'>
-																				<article class='col-1 indent1'>
-																					<ul class='info-list1'>
+																						<table width='90%' border='1'>
+																						<tr>
+																						<td>
+																						<img src=\"".$objResult->image."\">
+																						<br> <br>
+																						</td>
+																						<td width='20'>
+																						</td>
+																						<td>
+																						<br><br>
 																						"
-																						.$objSelect[detail].
+																						.$objResult->detail.
 																						"
-																					</ul>
-																				</article>
-																				
+																						</td>
+																						</tr>
+																						</table>
 																				<div class='clear'></div>
 																			</div>
 																		</div>
@@ -141,33 +153,86 @@
 															</div>
 														</div>
 													</div>";
-													//}
+													}
 													
+													
+													
+													
+													if($_SESSION['Status'] == "admin"){
+				
+														echo "
+														<form id='add-topic' name='form-add-topic' method='post' action='add_topic.php'>
+
+														<div class='border-top'>
+														<div class='inner1'>
+															<h4 class='extra aligncenter'>Add Topic</h4>
+															<div class=''>
+																<div class='line-ver1 left-indent'>
+																	<div class='line-ver2'>
+																		<div class='line-ver3'>
+																			<div class='wrap line-ver4'>
+																<div align='center'>
+																<br><br>
+																<table>
+																<tr>
+																	<td width='300' align='right'>Topic Name : 
+																	<br> <br>
+																	</td>
+																	<td width='300'><input type='text' id='topic' name='topic'>
+																	<br> <br>
+																	</td>
+																</tr>
+																<tr>
+																	<td align='right'>Detail : 
+																	<br> <br>
+																	</td>
+																	<td><textarea name='detail' id='detail' cols='45' rows='5'></textarea>
+																	<br> <br>
+																	</td>
+																</tr>
+																
+																<tr>
+																	<td align='right'>Image Url : 
+																	<br> <br>
+																	</td>
+																	<td><input type='text' id='image' name='image'>
+																	<br> <br>
+																	</td>
+																</tr>
+																
+																<tr>
+																	<td align='right'><a href='#' class='link1' onClick=\"document.getElementById('add-topic').submit()\" \><span><span>Save</span></span>
+																		</a>
+																	</td>
+																	<td><a href='blog.php' class='link1' \><span><span>Cancle</span></span>
+																		</a>
+																	</td>
+																</tr>
+
+																</table>
+															</div>
+																				<div class='clear'></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													</form>";	
+													}
 													
 													?>
 													
 												</div>
 											</div>
-											
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				
-				
-				<form >
-				<?
-				if($_SESSION['Status'] == "admin"){
-					echo "dddddddddddddd";
-														
-				}
-				?>
-				</form>
-				
-				
+				</div>	
 			</div>
 		</div>
 	</section>
