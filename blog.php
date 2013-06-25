@@ -142,6 +142,7 @@
 																						"
 																						.$objResult->detail.
 																						"
+																						<br><br><br>
 																						</td>
 																						</tr>
 																						</table>
