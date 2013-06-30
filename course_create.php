@@ -118,95 +118,43 @@
 							</ul>
 						</article> -->
 						<article class="col-2">
-							<h2> Register &nbsp;</h2>
+							<h2> Create new course &nbsp;</h2>
 							<p>&nbsp;</p>
-                          <form name="form1" id="register" method="post" action="member_insert.php">
+                          <form name="form1" id="add-course" method="post" action="course_add.php">
                             <table width="566" border="0" cellpadding="3">
                               <tr>
                                 <td width="8" height="33" rowspan="2">&nbsp;</td>
-                                <td width="138" height="33">Username</td>
+                                <td width="138" height="33">Course name</td>
                                 <td width="354"><label for="user"></label>
-                                <input type="text" name="user" id="user"></td>
+                                <input type="text" name="course_name" id="course_name"></td>
                                 <td width="32">&nbsp;</td>
                               </tr>
                               <tr>
-                                <td height="34">Password</td>
+                                <td height="34">Course detail </td>
                                 <td><label for="pwd"></label>
-                                <input type="password" name="pwd" id="pwd"></td>
+								<textarea name="course_detail" id="course_detail" cols="45" rows="5"></textarea><br><br></td>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
                                 <td height="31">&nbsp;</td>
-                                <td>Verify password</td>
+                                <td>Trainer</td>
                                 <td><label for="repwd"></label>
-                                <input type="password" name="repwd" id="repwd"></td>
+                                <input type="text" name="trainer" id="trainer"></td>
                                 <td>&nbsp;</td>
                               </tr>
 							  <tr>
-                                <td height="30">&nbsp;</td>
-                                <td>show Email</td>
-                                <td><label for="visible_mail"></label>
-                                  <label>
-                                    <input type="radio" name="visible_mail" id="true" value='1'>
-                                  </label>
-								<label for="visible_mail"></label>
-                                Yes &nbsp;&nbsp;
-                                <label>
-                                  <input type="radio" name="visible_mail" id="false" value='0'>
-                                  No
-                                </label></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="32">&nbsp;</td>
-                                <td>E-mail</td>
-                                <td><label for="email"></label>
-                                <input type="text" name="email" id="email"></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="32">&nbsp;</td>
-                                <td>Name</td>
-                                <td><label for="name"></label>
-                                <input type="text" name="name" id="name"></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="29">&nbsp;</td>
-                                <td>Surname</td>
-                                <td><label for="surname"></label>
-                                <input type="text" name="surname" id="surname"></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
-                                <td height="30">&nbsp;</td>
-                                <td>Gender</td>
-                                <td><label for="gender"></label>
-                                  <label>
-                                    <input type="radio" name="gender" id="male" value="male">
-                                  </label>
-								<label for="gender"></label>
-                                Male &nbsp;&nbsp;
-                                <label>
-                                  <input type="radio" name="gender" id="female" value="female">
-                                  Female
-                                </label></td>
-                                <td>&nbsp;</td>
-                              </tr>
-                              <tr>
                                 <td height="33">&nbsp;</td>
-                                <td>Birthdate</td>
-                                <td>dates 
-                                  <select name="date" size="1" id="date">
+                                <td>Start date</td>
+                                <td>
+                                  <select name="start_date" size="1" id="start_date">
                                   <? for($i=1 ; $i<=31 ; $i++)
 								  { 
 								  	echo "<option value='".$i."'>".$i."</option>";
 								  } 
 								  ?>
                                 </select> 
-                                  &nbsp;&nbsp;Months 
                                   <label for="month"></label>
-                                  <select name="month" size="1" id="month">
+                                  <select name="start_month" size="1" id="start_month">
                                     <option value='01'>January</option>
                                     <option value='02'>February</option>
                                     <option value='03'>March</option>
@@ -220,10 +168,45 @@
                                     <option value='11'>November </option>
                                     <option value='12'>December </option>
                                   </select> 
-                                  &nbsp;&nbsp;Years 
                                   <label for="year"></label>
-                                  <select name="year" size="1" id="year">
-                                  <? for($i=2013 ; $i>=1960 ; $i--)
+                                  <select name="start_year" size="1" id="start_year">
+                                  <? for($i=2000 ; $i<=2020 ; $i++)
+								  { 
+									echo "<option value='".$i."'>".$i."</option>";
+								  } 
+								  ?>
+                                  </select></td>
+                                <td>&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="33">&nbsp;</td>
+                                <td>End date</td>
+                                <td>
+                                  <select name="end_date" size="1" id="end_date">
+                                  <? for($i=1 ; $i<=31 ; $i++)
+								  { 
+								  	echo "<option value='".$i."'>".$i."</option>";
+								  } 
+								  ?>
+                                </select>  
+                                  <label for="month"></label>
+                                  <select name="end_month" size="1" id="end_month">
+                                    <option value='01'>January</option>
+                                    <option value='02'>February</option>
+                                    <option value='03'>March</option>
+                                    <option value='04'>April </option>
+                                    <option value='05'>May </option>
+                                    <option value='06'>June </option>
+                                    <option value='07'>July </option>
+                                    <option value='08'>August </option>
+                                    <option value='09'>September </option>
+                                    <option value='10'>October </option>
+                                    <option value='11'>November </option>
+                                    <option value='12'>December </option>
+                                  </select> 
+                                  <label for="year"></label>
+                                  <select name="end_year" size="1" id="end_year">
+                                  <? for($i=2000 ; $i<=2020 ; $i++)
 								  { 
 									echo "<option value='".$i."'>".$i."</option>";
 								  } 
@@ -232,11 +215,38 @@
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
-                                <td height="31">&nbsp;</td>
-                                <td>Address</td>
-                                <td><label for="date"></label>
-                                  <label for="addr"></label>
-                                <textarea name="addr" id="addr" cols="45" rows="5"></textarea></td>
+                                <td height="32">&nbsp;</td>
+                                <td>Place</td>
+                                <td><label for="email"></label>
+                                <textarea name="place" id="place" cols="45" rows="5"></textarea><br><br></td>
+                                <td>&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="32">&nbsp;</td>
+                                <td>Contact name</td>
+                                <td><label for="name"></label>
+                                <input type="text" name="con_name" id="con_name"></td>
+                                <td>&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="32">&nbsp;</td>
+                                <td>Contact phone</td>
+                                <td><label for="name"></label>
+                                <input type="text" name="con_phone" id="con_phone"></td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td height="32">&nbsp;</td>
+                                <td>Contact Email</td>
+                                <td><label for="name"></label>
+                                <input type="text" name="con_email" id="con_email"></td>
+                                <td>&nbsp;</td>
+                              </tr>
+                              <tr>
+                                <td height="29">&nbsp;</td>
+                                <td>Certificate type</td>
+                                <td><label for="surname"></label>
+                                <input type="text" name="cer_type" id="cer_type"></td>
                                 <td>&nbsp;</td>
                               </tr>
                             </table>
@@ -248,10 +258,11 @@
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <div class="aligncenter">
-  <a href="#" class="link1" onClick="document.getElementById('register').submit()" \><span><span>Sign Up</span></span>
+  <a href="#" class="link1" onClick="document.getElementById('add-course').submit()" \><span><span>Create Course</span></span>
   </a>
   
   </div>
+</br>
 </form>
 <!--</form>&nbsp; -->
 </p>

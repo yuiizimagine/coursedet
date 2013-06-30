@@ -38,6 +38,31 @@ INSERT INTO `blog` VALUES ('New Topic', 'Today, you need to be agile; you need t
 -- --------------------------------------------------------
 
 -- 
+-- โครงสร้างตาราง `course`
+-- 
+
+CREATE TABLE `course` (
+  `course_name` text NOT NULL,
+  `course_detail` text NOT NULL,
+  `trainer` varchar(20) NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `place` text NOT NULL,
+  `con_name` varchar(20) NOT NULL,
+  `con_phone` varchar(20) NOT NULL,
+  `con_email` varchar(50) NOT NULL,
+  `cer_type` varchar(10) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- 
+-- dump ตาราง `course`
+-- 
+
+INSERT INTO `course` VALUES ('xxx', 'xxx', 'xxx', '2000-01-01', '2000-01-01', 'xxx', 'xxx', 'xxx', 'xxxxx', 'xxx');
+
+-- --------------------------------------------------------
+
+-- 
 -- โครงสร้างตาราง `register`
 -- 
 
@@ -56,7 +81,7 @@ CREATE TABLE `register` (
   `trainer` tinyint(1) NOT NULL,
   `practitioner` tinyint(1) NOT NULL,
   PRIMARY KEY  (`member_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=33 ;
 
 -- 
 -- dump ตาราง `register`
@@ -67,3 +92,4 @@ INSERT INTO `register` VALUES (22, 'auimicky', '1234', 'auimicky@hotmail.com', 0
 INSERT INTO `register` VALUES (24, 'cartoonmed', 'cartoonman', 'cartoonman_jr@hotmail.com', 0, 'attakorn', 'poonkesorn', 'male', '111/2', '1991-04-01', 'admin', 0, 0);
 INSERT INTO `register` VALUES (25, 'jkme', 'jkmee', 'yuiizimagine@gmail.com', 1, 'juthathip', 'kaensing', '', '99/99', '1991-04-09', 'admin', 0, 0);
 INSERT INTO `register` VALUES (31, 'ccc', 'ccc', 'aaa', 1, 'aaa', 'aaa', 'female', 'aaa', '2013-01-01', 'user', 0, 0);
+INSERT INTO `register` VALUES (32, 'mmm', 'mmm', 'mmm', 1, 'mmm', 'mmm', 'male', 'mmm', '2013-01-01', 'user', 0, 0);
