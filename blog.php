@@ -107,58 +107,6 @@
 													
 													
 													<?
-													include("phpMySQLFunctionDatabase.php");
-	
-													$strTable = "blog";
-													$objSelect = fncSelectAllRecord($strTable);
-													//if(!$objSelect)
-													//{
-													//	echo "Record not found<br>";
-													//}
-													
-													while ($objResult = mysql_fetch_object($objSelect)) { 
-														//echo "".$objResult->topic."<br>";
-													
-													
-													//for($i = 1; $i < $objSelec ; $i++){
-													echo "<div class='border-top'>
-														<div class='inner1'>
-															<h4 class='extra aligncenter'>".$objResult->topic."</h4>
-															<div class=''>
-																<div class='line-ver1 left-indent'>
-																	<div class='line-ver2'>
-																		<div class='line-ver3'>
-																			<div class='wrap line-ver4'>
-																						<table width='90%' border='1'>
-																						<tr>
-																						<td>
-																						<img src=\"".$objResult->image."\">
-																						<br> <br>
-																						</td>
-																						<td width='20'>
-																						</td>
-																						<td>
-																						<br><br>
-																						"
-																						.$objResult->detail.
-																						"
-																						<br><br><br>
-																						</td>
-																						</tr>
-																						</table>
-																				<div class='clear'></div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>";
-													}
-													
-													
-													
-													
 													if($_SESSION['Status'] == "admin"){
 				
 														echo "
@@ -222,6 +170,61 @@
 													</div>
 													</form>";	
 													}
+													
+													
+													include("phpMySQLFunctionDatabase.php");
+	
+													$strTable = "blog";
+													$objSelect = fncSelectAllRecord($strTable);
+													//if(!$objSelect)
+													//{
+													//	echo "Record not found<br>";
+													//}
+													
+													while ($objResult = mysql_fetch_object($objSelect)) { 
+														//echo "".$objResult->topic."<br>";
+													
+													
+													//for($i = 1; $i < $objSelec ; $i++){
+													echo "<div class='border-top'>
+														<div class='inner1'>
+															<h4 class='extra aligncenter'>".$objResult->topic."</h4>
+															<div class=''>
+																<div class='line-ver1 left-indent'>
+																	<div class='line-ver2'>
+																		<div class='line-ver3'>
+																			<div class='wrap line-ver4'>
+																						<table width='90%' border='1'>
+																						<tr>
+																						<td>
+																						<img src=\"".$objResult->image."\">
+																						<br> <br>
+																						</td>
+																						<td width='20'>
+																						</td>
+																						<td>
+																						<br><br>
+																						"
+																						.$objResult->detail.
+																						"
+																						<br><br><br>
+																						</td>
+																						</tr>
+																						</table>
+																				<div class='clear'></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>";
+													}
+													
+													
+													
+													
+													
 													
 													?>
 													

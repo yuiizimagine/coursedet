@@ -1,4 +1,5 @@
 <?
+	include("phpMySQLFunctionDatabase.php");
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -117,22 +118,42 @@
 									<a href="#"><b>Read More</b></a></li>
 							</ul>
 						</article> -->
+						<?
+						$strTable = "course";
+						$strCondition = "course_id = ".$_GET['cid'];
+						$objSelect = fncSelectRecord($strTable,$strCondition);
+						?>
 						<article class="col-2">
-							<h2> Create new course &nbsp;</h2>
+							<h2> Edit course &nbsp;</h2>
 							<p>&nbsp;</p>
-                          <form name="form1" id="add-course" method="post" action="course_add.php">
+                          <form name="form1" id="edit-course" method="post" action="course_update.php">
                             <table width="566" border="0" cellpadding="3">
                               <tr>
                                 <td width="8" height="33" rowspan="2">&nbsp;</td>
-                                <td width="138" height="33">Course name</td>
+                                <td width="138" height="33">Course ID</td>
                                 <td width="354"><label for="user"></label>
-                                <input type="text" name="course_name" id="course_name"></td>
-                                <td width="32">&nbsp;</td>
+                                <?
+									echo "<input type='text' name='course_id' id='course_id' readonly='readonly' value='".$objSelect[course_id]."'></td>";
+                                ?>
+								<td width="32">&nbsp;</td>
+                              </tr>
+							  <tr>
+                                <td height="34">Course name </td>
+                                <td><label for="repwd"></label>
+								<?
+									echo "<input type='text' name='course_name' id='course_name' value='".$objSelect[course_name]."'></td>";
+                                ?>
+								</td>
+                                <td>&nbsp;</td>
                               </tr>
                               <tr>
-                                <td height="34">Course detail </td>
+                                <td height="31">&nbsp;</td>
+                                <td>Course detail </td>
                                 <td><label for="pwd"></label>
-								<textarea name="course_detail" id="course_detail" cols="45" rows="5"></textarea><br><br></td>
+								<?
+									echo "<textarea name='course_detail' id='course_detail' cols='45' rows='5'>".$objSelect[course_detail]."</textarea><br><br>";
+                                ?>
+								</td>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
@@ -221,49 +242,61 @@
                                 <td height="32">&nbsp;</td>
                                 <td>Place</td>
                                 <td><label for="email"></label>
-                                <textarea name="place" id="place" cols="45" rows="5"></textarea><br><br></td>
+                                <textarea name="place" id="place" cols="45" rows="5"><? echo $objSelect[place]; ?></textarea><br><br></td>
                                 <td>&nbsp;</td>
                               </tr>
 							  <tr>
                                 <td height="32">&nbsp;</td>
                                 <td>Contact name</td>
                                 <td><label for="name"></label>
-                                <input type="text" name="con_name" id="con_name"></td>
+								<?
+									echo "<input type='text' name='con_name' id='con_name' value='".$objSelect[con_name]."'></td>";
+                                ?>
                                 <td>&nbsp;</td>
                               </tr>
 							  <tr>
                                 <td height="32">&nbsp;</td>
                                 <td>Contact phone</td>
                                 <td><label for="name"></label>
-                                <input type="text" name="con_phone" id="con_phone"></td>
+								<?
+									echo "<input type='text' name='con_phone' id='con_phone' value='".$objSelect[con_phone]."'></td>";
+                                ?>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
                                 <td height="32">&nbsp;</td>
                                 <td>Contact Email</td>
                                 <td><label for="name"></label>
-                                <input type="text" name="con_email" id="con_email"></td>
+								<?
+									echo "<input type='text' name='con_email' id='con_email' value='".$objSelect[con_email]."'></td>";
+                                ?>
                                 <td>&nbsp;</td>
                               </tr>
                               <tr>
                                 <td height="29">&nbsp;</td>
                                 <td>Certificate type</td>
                                 <td><label for="surname"></label>
-                                <input type="text" name="cer_type" id="cer_type"></td>
+								<?
+									echo "<input type='text' name='cer_type' id='cer_type' value='".$objSelect[cer_type]."'></td>";
+                                ?>
                                 <td>&nbsp;</td>
                               </tr>
 							  <tr>
                                 <td height="29">&nbsp;</td>
                                 <td>Price</td>
                                 <td><label for="surname"></label>
-                                <input type="text" name="price" id="price"></td>
+								<?
+									echo "<input type='text' name='price' id='price' value='".$objSelect[price]."'></td>";
+                                ?>
                                 <td>&nbsp;</td>
                               </tr>
 							  <tr>
                                 <td height="29">&nbsp;</td>
                                 <td>Trainee number</td>
                                 <td><label for="surname"></label>
-                                <input type="text" name="trainee_no" id="trainee_no"></td>
+								<?
+									echo "<input type='text' name='trainee_no' id='trainee_no' value='".$objSelect[trainee_no]."'></td>";
+                                ?>
                                 <td>&nbsp;</td>
                               </tr>
                             </table>
@@ -275,7 +308,7 @@
 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <div class="aligncenter">
-  <a href="#" class="link1" onClick="document.getElementById('add-course').submit()" \><span><span>Create Course</span></span>
+  <a href="#" class="link1" onClick="document.getElementById('edit-course').submit()" \><span><span>Save</span></span>
   </a>
   
   </div>

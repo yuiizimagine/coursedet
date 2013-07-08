@@ -1,4 +1,5 @@
 <?
+	include("phpMySQLFunctionDatabase.php");
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -94,7 +95,13 @@
 						<p>Today, you need to be agile; you need to maximize the value you receive from your software teams, and respond to constantly evolving customer needs to stay competitive. From the fundamentals provided in our Foundations course to more specialized training for Scrum Masters, Product Owners, and Development Team members, Scrum.org provides a complete family of courses to help you learn the skills you need to become agile. Click on a course name for more information.    </p>
 					</div>
 				</div>
-				<h2 class="extra">Course</h2>
+				<h2 class="extra">Course </h2>
+				<? if($_SESSION["Trainer"] == 1)
+				{
+					echo "<a href='course_create.php' class='link1'><span><span>create course</span></span></a>";
+				}
+				?>
+				
 				<div class="box extra">
 					<div class="border-right">
 						<div class="border-bot">
@@ -107,13 +114,20 @@
 													<div class="left-indent line-ver1">
 														<div class="line-ver2">
 															<div class="line-ver3">
-																<div class="wrap line-ver4">
+																<div class="wrap line-ver4">															
 																	<article class="col-1 indent">
 																		<h4>Course</h4>
+																		
 																		<ul class="info-list1">
-																			<? for($i=1 ; $i<11 ; $i++)
+																			<? 
+																			
+	
+																			$strTable = "course";
+																			$objSelect = fncSelectAllRecord($strTable);
+																			
+																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
-																				echo "<li><a href='course_detail.php?cid=".$i."'>Course ".$i." </li>";
+																				echo "<li><a href='course_detail.php?cid=".$objResult->course_id."'>".$objResult->course_name." </a></li>";
 																			} 
 																			?>	
 
@@ -121,9 +135,15 @@
 																	<article class="col-2 indent">
 																		<h4 class="aligncenter">Personal</h4>
 																		<ul class="info-list1 alt">
-																			<? for($i=1 ; $i<11 ; $i++)
+																		
+																			<? 
+																			
+																			$strTable = "course";
+																			$objSelect = fncSelectAllRecord($strTable);
+																			
+																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
-																				echo "<li>10</li>";
+																				echo "<li>".$objResult->trainee_no."</li>";
 																			} 
 																			?>
 																		</ul>
@@ -132,9 +152,14 @@
 																	<article class="col-3 indent">
 																		<h4 class="aligncenter">Start Date</h4>
 																		<ul class="info-list1 alt">
-																			<? for($i=1 ; $i<11 ; $i++)
+																			<? 
+																			
+																			$strTable = "course";
+																			$objSelect = fncSelectAllRecord($strTable);
+																			
+																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
-																				echo "<li>Date</li>";
+																				echo "<li>".$objResult->start_date."</li>";
 																			} 
 																			?>
 																		</ul>
@@ -143,9 +168,14 @@
 																	<article class="col-4 indent">
 																		<h4 class="aligncenter">Price</h4>
 																		<ul class="info-list1 alt">
-																			<? for($i=1 ; $i<11 ; $i++)
+																			<? 
+																			
+																			$strTable = "course";
+																			$objSelect = fncSelectAllRecord($strTable);
+																			
+																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
-																				echo "<li>$100</li>";
+																				echo "<li> $".$objResult->price."</li>";
 																			} 
 																			?>
 																		</ul>
@@ -154,9 +184,15 @@
 																	<article class="col-5 indent">
 																		<h4 class="aligncenter">pdf</h4>
 																		<ul class="info-list1 alt">
-																			<? for($i=1 ; $i<11 ; $i++)
+																		
+																		<? 
+																			
+																			$strTable = "course";
+																			$objSelect = fncSelectAllRecord($strTable);
+																			
+																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
-																				echo "<li><a href='load_pdf.php?course=".$i."'>download</a></li>";
+																				echo "<li><a href='load_pdf.php?course=".$objResult->course_id."'>download</a></li>";
 																			} 
 																			?>
 																		</ul>
@@ -169,153 +205,7 @@
 															</div>
 														</div>
 													</div>
-													<div class="border-top">
-														<div class="inner1">
-															<h4 class="extra aligncenter">You can create...</h4>
-															<div class="">
-																<div class="line-ver1 left-indent">
-																	<div class="line-ver2">
-																		<div class="line-ver3">
-																			<div class="wrap line-ver4">
-																				<article class="col-1 indent1">
-																					<ul class="info-list1">
-																						<li>Domains</li>
-																						<li>Subdomains</li>
-																						<li>FTP accounts</li>
-																					</ul>
-																				</article>
-																				<article class="col-2 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																					</ul>
-																				</article>
-																				<article class="col-3 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																					</ul>
-																				</article>
-																				<article class="col-4 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																					</ul>
-																				</article>
-																				<article class="col-5 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																						<li>unlimited</li>
-																					</ul>
-																				</article>
-																				<div class="clear"></div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="border-top">
-														<div class="inner1">
-															<h4 class="extra aligncenter">All accounts will have...</h4>
-															<div class="">
-																<div class="line-ver1 left-indent">
-																	<div class="line-ver2">
-																		<div class="line-ver3">
-																			<div class="wrap line-ver4">
-																				<article class="col-1 indent1">
-																					<ul class="info-list1">
-																						<li>MySQL Databases</li>
-																						<li>CGI</li>
-																						<li>PERL</li>
-																						<li>Cron</li>
-																						<li>SSI</li>
-																						<li>Frontpage</li>
-																						<li>Curl</li>
-																						<li>Image Magick</li>
-																						<li>Streaming video and music</li>
-																						<li>GD</li>
-																						<li>Python</li>
-																						<li>PHP</li>
-																					</ul>
-																				</article>
-																				<article class="col-2 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																					</ul>
-																				</article>
-																				<article class="col-3 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																					</ul>
-																				</article>
-																				<article class="col-4 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																					</ul>
-																				</article>
-																				<article class="col-5 indent1">
-																					<ul class="info-list1 alt">
-																						<li>unlimited</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																						<li>yes</li>
-																					</ul>
-																				</article>
-																				<div class="clear"></div>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
+													
 												</div>
 											</div>
 										</div>

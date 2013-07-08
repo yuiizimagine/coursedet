@@ -1,4 +1,5 @@
 <?
+	include("phpMySQLFunctionDatabase.php");
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -106,10 +107,16 @@
 						  </table>
 							<p>&nbsp;</p>
 <?
-	include("phpMySQLFunctionDatabase.php");
+	
 	
 	$strTable = "register";
-	$strCondition = "user = '".$_SESSION['UserID']."' ";
+	
+	if($_GET['user'] != NULL){
+		$strCondition = "user = '".$_GET['user']."' ";
+	}
+	else{
+		$strCondition = "user = '".$_SESSION['UserID']."' ";
+	}
 	$objSelect = fncSelectRecord($strTable,$strCondition);
 	if(!$objSelect)
 	{
@@ -232,11 +239,21 @@
                                 <td>Register to trainer</td>
                                 <td>
 									<?
-									if($objSelect["trainer"] == 0){
-										echo "<a href='status_edit.php?class=trainer&value=1'>register</a>";
+									if($_GET['user'] == $_SESSION['UserID'] || $_GET['user'] == NULL){
+										if($objSelect["trainer"] == 0){
+											echo "<a href='status_edit.php?class=trainer&value=1'>register</a>";
+										}
+										else {
+											echo "<a href='status_edit.php?class=trainer&value=0'>unregister</a>";
+										}
 									}
-									else {
-										echo "<a href='status_edit.php?class=trainer&value=0'>unregister</a>";
+									else{
+										if($objSelect["trainer"] == 0){
+											echo "not register";
+										}
+										else {
+											echo "registered";
+										}
 									}
 									?>
 								</td>
@@ -247,11 +264,21 @@
                                 <td>Register to practitioner</td>
                                 <td>
 									<?
-									if($objSelect["practitioner"] == 0){
-										echo "<a href='status_edit.php?class=practitioner&value=1'>register</a>";
+									if($_GET['user'] == $_SESSION['UserID'] || $_GET['user'] == NULL){
+										if($objSelect["practitioner"] == 0){
+											echo "<a href='status_edit.php?class=practitioner&value=1'>register</a>";
+										}
+										else {
+											echo "<a href='status_edit.php?class=practitioner&value=0'>unregister</a>";
+										}
 									}
-									else {
-										echo "<a href='status_edit.php?class=practitioner&value=0'>unregister</a>";
+									else{
+										if($objSelect["trainer"] == 0){
+											echo "not register";
+										}
+										else {
+											echo "registered";
+										}
 									}
 									?>
 									
@@ -302,9 +329,13 @@
                               
   <br>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  
   <div class="aligncenter">
-  <a href="profile_edit.php" class="link1"\><span><span>Edit Profile</span></span>
-  </a>
+  <?
+	if($_GET['user'] == $_SESSION['UserID'] || $_GET['user'] == NULL){
+		echo "<a href='profile_edit.php' class='link1'\><span><span>Edit Profile</span></span></a>";
+	}
+  ?>
   
   </div>
                             </p>

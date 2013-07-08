@@ -18,6 +18,13 @@
 			return @mysql_fetch_array($objQuery);
 	}
 	
+	/**** function select record ****/
+	function fncSelectColumnRecord($strTable,$strColumn)
+	{
+			$strSQL = "SELECT $strColumn FROM $strTable";
+			return @mysql_query($strSQL);
+	}
+	
 	/**** function select all record ****/
 	function fncSelectAllRecord($strTable)
 	{

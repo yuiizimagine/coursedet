@@ -97,41 +97,37 @@
 					<div class="wrap row-2">
 
 						<article class="col-2">
-							<h1>Course Detail</h1><br>
-							<img src="images/crouse-detail.png">
-							<h2>The Professional Scrum Foundations Program</h2>
-							<p><b>Details</b></p>
-							<UL TYPE="square">
-							<LI>Fee: $100</LI>
-							<LI>Passing score: 85%</LI>
-							<LI>Time limit: 60 minutes</LI>
-							<LI>Format: Multiple Choice and True/False</LI>
-							<LI>Required course: None</LI>
-							<LI>Recommended course: Professional Scrum Foundations or Professional Scrum Master</LI>
-							<LI>Practice Assessment: Scrum Open</LI>
+						<?
+						$strTable = "course";
+						$strCondition = "course_id = ".$_GET['cid'];
+						$objSelect = fncSelectRecord($strTable,$strCondition);
+	
+						
+						echo "<h1>Course Detail</h1><br>
+							<img src='images/crouse-detail.png'>
+							<h2>".$objSelect[course_name]."</h2>
+							<p><b>Overview</b></p>
+							<UL TYPE='square'>
+							<LI>Fee: $".$objSelect[price]."</LI>
+							<LI>Quantity: ".$objSelect[trainee_no]."</LI>
+							<LI>Trainer: <a href='profile.php?user=".$objSelect[trainer]."'>".$objSelect[trainer]."</a></LI>
+							<LI>Contact Name: ".$objSelect[con_name]."</LI>
+							<LI>Contact Phone: ".$objSelect[con_phone]."</LI>
+							<LI>Contact Email: ".$objSelect[con_email]."</LI>
+							<LI>Start Date : ".$objSelect[start_date]."</LI>
+							<LI>End Date : ".$objSelect[end_date]."</LI>
+							<LI>Place: ".$objSelect[place]."</LI>
 							</UL>
 							
-							<br><br><p><b>Overview</b></p>
-							<p>Scrum Teams succeed best with a solid foundation and this two-day course prepares individuals or teams to begin effectively using Scrum immediately. The Scrum framework, mechanics, and roles of Scrum are emphasized with a focus on practical application. </p>
-							<p>Common missteps in the adoption of Scrum have been seen over and over again across industries, companies, and teams. Rather than coaching teams back from a poorly functioning Scrum implementation, PSF exposes these common missteps, increases the awareness of the associated symptoms, and provides prescriptive guidance to avoid going off track. </p>
-							<p>Professional Scrum Foundations (PSF) is the perfect introduction to Scrum for anyone new to the framework. Whether your team needs a flawless Scrum launch or needs to reboot a struggling Scrum implementation, this class lays the foundation for an effective Scrum team. This course also provides the foundation of knowledge needed for role-focused training for Product Owners, Scrum Masters and Developers.</p>
+							<br><br><p><b>Detail</b></p>
+							<p>".$objSelect[course_detail];
 							
-							<br><p><b>Audience</b></p>
-							<p>But the PSF course is not for everyone. Well-functioning Scrum teams looking for assistance with advanced topics like Scaling Scrum or implementing a rigorous ROI framework will not receive as much benefit from this course. Teams looking to explore more advanced Scrum topics such as Scaling Scrum or Release Planning should consider the Professional Scrum Master program.
-							PSF is most effective as a training event for a dedicated team.</p>
-							<p><b>Syllabus</b></p>
-							<p>In addition to the subjects noted below, students actively participate in the Scrum process with realistic and practical hands-on exercises that reinforce the learning points. Practicing Scrum ensures that students complete the class with new skills in addition to new knowledge and theory.</p>
-							<img src="images/crouse-detail1.png">
-							<br><br><p><b>The Scrum Framework</b></p>
-							<p>Students dive into the Scrum software development framework including, roles and responsibilities, principles, artifacts, events and time boxes, and rules and customs.</p>
-							<p><b>Introducing Scrum and Agile</b></p>
-							<p>This module discusses the current state of the software industry and Scrum is role within it. Topics include the origins of Scrum, misconceptions of the framework, the value that Scrum provides, and an exploration of self-organization as a power tool for increasing productivity.</p>
-							<p><b>Scrum Planning</b></p>
-							<p>Learn practical techniques of planning releases, managing Product Backlogs, keeping Sprints on track, and maintaining healthy team behaviors. Although many effective techniques exist for expressing requirements, this module equips teams to discover, express, and decompose requirements as Backlog Items using proven techniques.</p>
-							<p><b>Keeping Scrum Healthy</b></p>
-							<p>This module focuses on common missteps teams make when adopting Scrum and strategies to avoid them. In addition to discussing typical patterns/anti-patterns in this module, class attendees practice some of the more courageous conversations that commonly occur.</p>
-							<p><b>Getting Started</b></p>
-							<p>Following an excellent training event, Teams often struggle implementing what seemed so reasonable just a few days ago. This discussion helps attendees plan and prepare to actually be effective with Scrum immediately, marking the PSF as the true catalyst for change and increasing agility within your organization.</p>
+							if($objSelect[trainer] == $_SESSION['UserID']){
+								echo "<div class='aligncenter'>
+								<a href='course_edit.php?cid=".$objSelect[course_id]."' class='link1'\><span><span>Edit Course</span></span></a>
+								</div>";
+							}
+						?>
 							
 					    </article>
 						<div class="clear"></div>
@@ -149,31 +145,7 @@
 				<div class="line-ver2">
 					<div class="line-ver3">
 						<div class="wrapper line-ver4">
-							 <ul class="list col-1">
-								<li>Other</li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-							</ul>
-							<ul class="list col-2">
-								<li>Other</li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-							</ul>
-							<ul class="list col-3">
-								<li>Other</li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-							</ul>
-							<ul class="list col-4">
-								<li>Other</li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-							</ul>
-							<ul class="list col-5">
-								<li>Other</li>
-								<li><a href="#">Link</a></li>
-								<li><a href="#">Link</a></li>
-							</ul> 
+							
 						</div>
 					</div>
 				</div>

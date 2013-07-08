@@ -14,6 +14,7 @@
 	{
 			$_SESSION["UserID"] = $objResult["user"];
 			$_SESSION["Status"] = $objResult["status"];
+			$_SESSION["Trainer"] = $objResult["trainer"];
 			$_SESSION["Visible_mail"] = $objResult["visible_mail"];
 
 			session_write_close();
