@@ -1,4 +1,5 @@
 <?
+	include("phpMySQLFunctionDatabase.php");
 	session_start();
 ?>
 <!DOCTYPE html>
@@ -232,7 +233,68 @@
 													}
 													
 													
-													include("phpMySQLFunctionDatabase.php");
+													$strTable = "blog";
+													$field = "point";
+													$objResult = fncSelectMAXRecord($strTable, $field);
+
+													echo "
+													<form id='top-topic' name='top-topic' method='post' action='like.php'>
+
+													<div class='border-top'>
+														<div class='inner1'>
+															<h4 class='extra aligncenter'>HOT !!! --- ".$objResult['topic']."</h4>
+															<div class=''>
+																<div class='line-ver1 left-indent'>
+																	<div class='line-ver2'>
+																		<div class='line-ver3'>
+																			<div class='wrap line-ver4'>
+																						<table width='90%' border='1'>
+																						<tr>
+																						<td>
+																						<img src=\"".$objResult[image]."\">
+																						<br> <br>
+																						</td>
+																						<td width='20'>
+																						</td>
+																						<td>
+																							<table width='100%'>
+																								<tr>
+																									<td align='left'>
+																								<br><br>
+																								"
+																								.$objResult[detail].
+																								"
+																								<br><br><br>
+																									</td>
+																								</tr>
+																								<tr>
+																									
+																										<td>
+																									Write Date : "
+																									.$objResult['date'].
+																									"
+																										</td>
+																										<td>
+																									<a href='like.php?id=".$objResult[blog_id]."&point=".($objResult[point]+1)."' class='link1' \><span><span>Like</span></span>
+																										</td>
+																									
+																								</tr>
+																							</table>
+																						</td>
+																						</tr>
+																						</table>
+																				<div class='clear'></div>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													</form>";
+													
+													
+													
 	
 													$strTable = "blog";
 													$objSelect = fncSelectAllRecord($strTable);

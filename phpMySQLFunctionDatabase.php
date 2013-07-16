@@ -18,6 +18,15 @@
 			return @mysql_fetch_array($objQuery);
 	}
 	
+	/**** function Max select record ****/
+	function fncSelectMAXRecord($strTable,$field)
+	{
+			$strSQL = "SELECT * FROM $strTable ORDER BY $field DESC LIMIT 1";
+			//$strSQL = "SELECT $id FROM $strTable WHERE $field=$maxPoint";
+			$objQuery = @mysql_query($strSQL);
+			return @mysql_fetch_array($objQuery);
+	}
+	
 	/**** function select record ****/
 	function fncSelectColumnRecord($strTable,$strColumn)
 	{
@@ -52,4 +61,5 @@
 			$strSQL = "DELETE FROM $strTable WHERE $strCondition ";
 			return @mysql_query($strSQL);
 	}
+
 ?>
