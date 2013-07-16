@@ -1,17 +1,14 @@
 <?php
-	if($_POST["topic"])
+	session_start();
+	if($_SESSION['UserID'] != "")
 	{
 		$objConnect = mysql_connect("localhost","root","1234") or die("Error Connect to Database");
 		$objDB = mysql_select_db("coursedetdb");
-		$strSQL = "INSERT INTO blog ";
-		$strSQL .="VALUES ";
-		$strSQL .="(NULL ";
-		$strSQL .=" , '".$_POST["topic"]."' ";
-		$strSQL .=" , '".$_POST["detail"]."' ";
-		$strSQL .=" , '".$_POST["image"]."' ";
-		$strSQL .=" , '".$_POST["year"]."-".$_POST["month"]."-".$_POST["date"]."' ";
-		$strSQL .=" , 0";
-		$strSQL .=") ";
+		$strSQL = "UPDATE blog ";
+		$strSQL .="SET ";
+		$strSQL .=" point='".$_GET["point"]."'";
+		$strSQL .=" WHERE ";
+		$strSQL .="blog_id='".$_GET["id"]."'";
 		$objQuery = mysql_query($strSQL);
 		//echo $strSQL;
 	
@@ -28,7 +25,7 @@
 	}
 	else
 	{
-		echo "Can's give value from blog page.";
+		echo "You not login.";
 	}
 ?>
 	
@@ -37,5 +34,3 @@
  <?php
 
 ?>
-
-
