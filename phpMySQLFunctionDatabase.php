@@ -30,7 +30,13 @@
 	{
 			$strSQL = "SELECT * FROM $strTable ";
 			return @mysql_query($strSQL);
-
+	}
+	
+	/**** function select all record ****/
+	function fncSelectAllRecordOrder($strTable, $order)
+	{
+			$strSQL = "SELECT * FROM $strTable ORDER BY $order DESC";
+			return @mysql_query($strSQL);
 	}
 
 	/**** function update record ****/

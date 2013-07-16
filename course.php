@@ -123,7 +123,8 @@
 																			
 	
 																			$strTable = "course";
-																			$objSelect = fncSelectAllRecord($strTable);
+																			$order = "start_date";
+																			$objSelect = fncSelectAllRecordOrder($strTable, $order);
 																			
 																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
@@ -139,7 +140,8 @@
 																			<? 
 																			
 																			$strTable = "course";
-																			$objSelect = fncSelectAllRecord($strTable);
+																			$order = "start_date";
+																			$objSelect = fncSelectAllRecordOrder($strTable, $order);
 																			
 																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
@@ -155,7 +157,8 @@
 																			<? 
 																			
 																			$strTable = "course";
-																			$objSelect = fncSelectAllRecord($strTable);
+																			$order = "start_date";
+																			$objSelect = fncSelectAllRecordOrder($strTable, $order);
 																			
 																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
@@ -171,7 +174,8 @@
 																			<? 
 																			
 																			$strTable = "course";
-																			$objSelect = fncSelectAllRecord($strTable);
+																			$order = "start_date";
+																			$objSelect = fncSelectAllRecordOrder($strTable, $order);
 																			
 																			while ($objResult = mysql_fetch_object($objSelect)) 
 																			{ 
